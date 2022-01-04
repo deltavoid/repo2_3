@@ -2,7 +2,7 @@
 
 cmake_minimum_required (VERSION 3.5)
 
-project(repo2_2
+project(repo2_3
     VERSION 1.0
 )
 
@@ -43,7 +43,6 @@ find_package(Repo2_2 REQUIRED)
 
 # targets and directories
 add_subdirectory(library1)
-# add_subdirectory(library1_1)
 add_subdirectory(binary1)
 
 
@@ -64,7 +63,6 @@ set(PACKAGE_FILE_NAME Repo2_3)
 install(
     TARGETS
         library1
-        # library1_1
     EXPORT ${PACKAGE_PATH_NAME}-export
     LIBRARY DESTINATION lib/${PACKAGE_PATH_NAME}
     ARCHIVE DESTINATION lib/${PACKAGE_PATH_NAME}
