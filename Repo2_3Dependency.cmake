@@ -2,6 +2,6 @@
 
 
 
-find_package(Repo2_1 REQUIRED)
+find_package(Repo2_2 REQUIRED)
 
 
