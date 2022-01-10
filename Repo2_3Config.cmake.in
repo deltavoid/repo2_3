@@ -1,5 +1,5 @@
 
-message("Repo1Config.cmake.in begin")
+message("Repo2_3Config.cmake.in begin")
 
 
 message("CMAKE_PROJECT_NAME: ${CMAKE_PROJECT_NAME}")
@@ -28,8 +28,9 @@ include(CMakeFindDependencyMacro)
 # targets
 
 if (NOT TARGET Repo2_3::library1)
+  include("${CMAKE_CURRENT_LIST_DIR}/Repo2_3Dependency.cmake")
   include("${CMAKE_CURRENT_LIST_DIR}/Repo2_3Targets.cmake")
 endif()
 
 
-message("Repo1Config.cmake.in end")
+message("Repo2_3Config.cmake.in end")
