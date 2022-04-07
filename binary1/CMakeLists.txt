@@ -31,3 +31,4 @@ target_link_libraries(binary1
     Repo2_1::library1
     Repo2_2::library1
 )
+echo_target(binary1)
