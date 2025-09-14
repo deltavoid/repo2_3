@@ -96,11 +96,12 @@ add_subdirectory(binary1)
 
 
 
-# package export
+# package export ----------------------------------------------
 
 
-set(PACKAGE_PATH_NAME repo2_3)
 set(PACKAGE_FILE_NAME Repo2_3)
+set(PACKAGE_PATH_NAME repo2_3)
+# config file path at /usr/local/lib/cmake/repo2_3
 
 # now only supports /usr/local installation
 
@@ -124,22 +125,9 @@ install(
   DESTINATION include/${PACKAGE_PATH_NAME}/library1/public
 )
 
-# install(
-#   FILES
-#     ${CMAKE_CURRENT_SOURCE_DIR}/library1_1/public/library1_1.h
-#   DESTINATION "include/repo1/library1_1/public"
-# )
 
 
-
-
-
-
-
-
-
-
-#  targets
+#  package targets
 install(
     EXPORT ${PACKAGE_PATH_NAME}-export
     FILE ${PACKAGE_FILE_NAME}Targets.cmake
@@ -173,7 +161,7 @@ install(
   DESTINATION lib/cmake/${PACKAGE_PATH_NAME}
 )
 
-
+# package dependencies
 file(COPY ${CMAKE_CURRENT_LIST_DIR}/${PACKAGE_FILE_NAME}Dependencies.cmake
     DESTINATION ${CMAKE_BINARY_DIR}/
 )
